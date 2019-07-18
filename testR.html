@@ -1,0 +1,10 @@
+<script src="https://unpkg.com/history"></script>
+<script>
+
+    const history = window.History.createBrowserHistory();
+
+    const unlisten = history.listen((location, action) => {
+        console.log(action, location.pathname, location.state);
+    });
+
+</script>
