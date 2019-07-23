@@ -47,6 +47,7 @@ export default class FluidRouter extends Component<FluidRouterProps> {
     state: any = {
         isPush: true
     }
+    lastKey?:string
     lastLength: number = 0
     componentDidMount() {
         reaction(
@@ -56,6 +57,17 @@ export default class FluidRouter extends Component<FluidRouterProps> {
                     isPush: length > this.lastLength
                 })
                 this.lastLength = length
+            }
+        )
+        reaction(
+            () => this.editableHistory.historyList.eh_ck,
+            eh_ck => {
+                if (this.lastKey && !this.state[eh_ck]) {
+                    this.setState({
+                        [eh_ck]: this.state[this.lastKey]
+                    })
+                }
+               this.lastKey = eh_ck
             }
         )
         const { routes } = this.props

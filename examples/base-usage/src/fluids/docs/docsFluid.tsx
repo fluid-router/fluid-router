@@ -1,10 +1,10 @@
 import React from 'react'
-import PPTPage from './screens/PPTPage'
+import SlideScreen from './screens/SlideScreen'
 
-export default (navigation: any) => {
+export default (navigation: any, params: any) => {
     const displayPage = (pageNumber: number) => {
         navigation.pushScreen(
-            <PPTPage
+            <SlideScreen
                 pageNumber={pageNumber}
                 onNext={() => {
                     displayPage(pageNumber + 1)

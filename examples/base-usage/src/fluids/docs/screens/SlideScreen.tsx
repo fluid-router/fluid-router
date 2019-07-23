@@ -1,12 +1,12 @@
 import React from 'react'
 
-type PPTPageProps = {
+type SlideScreenProps = {
     pageNumber: number
-    onNext: () => void
+    onNext: (nextPageNumber: number) => void
     onBack: () => void
 }
 
-export default (props: PPTPageProps) => {
+export default (props: SlideScreenProps) => {
     return (
         <div className="App">
             <header className="App-header">
@@ -17,7 +17,13 @@ export default (props: PPTPageProps) => {
                             prev
                         </div>
                     )}
-                    <div className="App-link" onClick={props.onNext}>
+
+                    <div
+                        className="App-link"
+                        onClick={() => {
+                            props.onNext(props.pageNumber + 1)
+                        }}
+                    >
                         next
                     </div>
                 </div>

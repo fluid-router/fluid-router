@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripfts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,5 +38,6 @@
     "mobx": "^5.13.0",
     "mobx-react": "^6.1.1",
     "react-spring": "^8.0.27"
-  }
+  },
+  "homepage": "./"
 }
