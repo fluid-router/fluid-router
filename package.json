@@ -1,0 +1,8 @@
+{
+  "description": "Rethinking router",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "name": "fluid-router"
+}
