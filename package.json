@@ -1,8 +1,14 @@
 {
   "description": "Rethinking router",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
+    "jest": "^26.4.2",
     "lerna": "^3.22.1",
+    "prettier": "^2.1.1",
+    "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
   },
   "name": "fluid-router"
