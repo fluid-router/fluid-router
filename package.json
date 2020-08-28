@@ -2,9 +2,11 @@
   "description": "Rethinking router",
   "private": true,
   "scripts": {
-    "test": "jest"
+    "test": "lerna exec --scope @fluid-router/core yarn test",
+    "test-dts": "lerna exec --scope @fluid-router/core yarn test-dts"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.10",
     "jest": "^26.4.2",
     "lerna": "^3.22.1",
     "prettier": "^2.1.1",

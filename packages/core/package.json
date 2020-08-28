@@ -21,7 +21,8 @@
     "url": "git+https://github.com/fluid-router/fluid-router.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "jest",
+    "test-dts": "tsc -p ./test-dts/tsconfig.json"
   },
   "bugs": {
     "url": "https://github.com/fluid-router/fluid-router/issues"
